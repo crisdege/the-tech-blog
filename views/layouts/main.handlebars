@@ -15,37 +15,27 @@
   <div class="wrapper">
     <header class="bg-light">
     
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          {{#if loggedIn}}
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/" class="homepage">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <button type="button" class="btn btn-light" id="logout">Logout</button>
-            </li>
-          {{else}}
-            <li class="nav-item">
-              <a href="/" class="nav-link active" aria-current="page" >Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/login">Login</a>
-            </li>
-          {{/if}}
-        </ul>
-      </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">      
+          {{#if loggedIn}}           
+              <div class="navbar-nav">
+                <a class="nav-link active homepage" aria-current="page" href="/">Home</a>
+                <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+                <button type="button" class="btn btn-light" id="logout">Logout</button>
+              </div>            
+          {{else}}           
+              <div class="navbar-nav">
+                <a href="/" class="nav-link active" aria-current="page" >Home</a>
+                <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+                <a class="nav-link active" aria-current="page" href="/login">Login</a>
+              </div>
+            
+          {{/if}}             
     </nav>
-
-    <h1 class="fs-1 shadow-lg p-3 mb-5 rounded blog-title">
+    <div>
+      <h1 class="d-inline-flex fs-1 shadow-lg p-3 mb-5 rounded blog-title">
         The Tech Blog 
-    </h1>
+      </h1>
+    </div>
     </header>
     <main>
       {{{ body }}}
@@ -55,7 +45,7 @@
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
     {{/if}}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
